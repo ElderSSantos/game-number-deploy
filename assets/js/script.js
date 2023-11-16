@@ -15,17 +15,21 @@ function debug(event) {
   const respostaInput = document.getElementById('resposta');
   const valorChute = parseInt(respostaInput.value);
 
+  
   if (contadorErros == 10) {
     let tentativasMaximas = confirm('Que pena, você já teve seu número máximo de tentativas, tente novamente, deseja iniciar uma nova partida?');
     if (tentativasMaximas) {
-      numeroSecreto = gerarNumeroSecreto();
-      alert('Novo número aleatório gerado. Boa sorte na próxima rodada!');
       respostaInput.value = '';
+      numeroSecreto = gerarNumeroSecreto();
       contadorErros = 0;
+      alert('Novo número aleatório gerado. Boa sorte na próxima rodada!');  
+      return;
+
     } else {
       alert('Obrigado por jogar! Até a próxima.');
       window.close();
     }
+    
   }
 
   if (valorChute === numeroSecreto) {
