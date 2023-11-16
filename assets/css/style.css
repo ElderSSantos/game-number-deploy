@@ -1,0 +1,132 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  background-image: url("https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/background_mentalista.png");
+  background-color: #000000;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0; 
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 250px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.contador {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 80px;
+  position: absolute;
+  top: 13px;
+  left: 7px;
+  text-align: center;
+}
+
+.input-container input {
+  background-color: rgba(211, 211, 211, 0.8);
+  border-color: rgba(211, 211, 211, 0.1);
+  border-radius: 4px;
+  width: 30px;
+  height: 25px;
+  text-align: center;
+}
+
+.input-container label {
+  color: rgba(211, 211, 211, 0.8); 
+  font-size: 14px;
+}
+
+
+
+.input-container input[type="number"]::-webkit-inner-spin-button,
+.input-container input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+.main-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  width: 300px; 
+  height: 125px;
+  margin: auto; 
+  border-radius: 7%;
+  background: rgba(85, 144, 202, 0.1);
+}
+
+.main-content{
+overflow: hidden;
+width: 100%;
+}
+
+.main-content input[type="number"]{
+  width: 65%;
+  height: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: rgba(211,211,211, 0.9);
+  border-color: rgb(176,196,222);
+  font-size: 20px;
+  border-radius: 8px;
+  }
+
+.main-content input[type="number"]:focus{
+  outline: none;
+  text-align: center;
+  background-color: rgba(173, 173, 173, 0.9);
+}
+
+.main-content input[type="number"]:hover{
+  background-color: rgba(173, 173, 173, 0.9);
+}
+
+.main-content input[type="submit"]{
+  width: 30%;
+  height: 25px;
+  border-radius: 5px;
+  border-color: rgb(176,196,222);
+  background-color: rgba(211,211,211, 0.9);
+}
+
+.main-content input[type="submit"]:hover{
+  background-color: rgba(166, 166, 166, 0.833);
+  border-color: rgba(166, 166, 166, 0.833);
+  transition: all 0.3s;
+}
+body > img {
+  margin: 0 10px;
+}
+
+img {
+  max-height: 350px;
+}
