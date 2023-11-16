@@ -15,7 +15,7 @@ function debug(event) {
   const respostaInput = document.getElementById('resposta');
   const valorChute = parseInt(respostaInput.value);
 
-  if (contadorErros >= 10) {
+  if (contadorErros == 10) {
     let tentativasMaximas = confirm('Que pena, você já teve seu número máximo de tentativas, tente novamente, deseja iniciar uma nova partida?');
     if (tentativasMaximas) {
       numeroSecreto = gerarNumeroSecreto();
@@ -27,7 +27,7 @@ function debug(event) {
       window.close();
     }
   }
-  
+
   if (valorChute === numeroSecreto) {
     let querContinuar = confirm('Parabéns, você acertou! Deseja continuar jogando?');
     if (querContinuar) {
