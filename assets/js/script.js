@@ -1,3 +1,8 @@
+window.onload = function() {
+    alert('Bem Vindo!\nEste é um jogo de adivinhação, onde você tem 10 tentativas para tentar adivinhar o número escolhido aleatoriamente entre 1 e 100, boa sorte! :)');
+};
+
+
 let numeroSecreto = gerarNumeroSecreto();
 let contadorErros = 0;
 
@@ -10,6 +15,19 @@ function debug(event) {
   const respostaInput = document.getElementById('resposta');
   const valorChute = parseInt(respostaInput.value);
 
+  if (contadorErros >= 10) {
+    let tentativasMaximas = confirm('Que pena, você já teve seu número máximo de tentativas, tente novamente, deseja iniciar uma nova partida?');
+    if (tentativasMaximas) {
+      numeroSecreto = gerarNumeroSecreto();
+      alert('Novo número aleatório gerado. Boa sorte na próxima rodada!');
+      respostaInput.value = '';
+      contadorErros = 0;
+    } else {
+      alert('Obrigado por jogar! Até a próxima.');
+      window.close();
+    }
+  }
+  
   if (valorChute === numeroSecreto) {
     let querContinuar = confirm('Parabéns, você acertou! Deseja continuar jogando?');
     if (querContinuar) {
@@ -31,6 +49,7 @@ function debug(event) {
     alert('Opção inválida');
   }
 
+
   atualizarContador();
 }
 
@@ -41,4 +60,6 @@ function incrementarContadorErros() {
 function atualizarContador() {
   const contadorInput = document.getElementById('contador');
   contadorInput.value = contadorErros;
-}
+  }
+
+
